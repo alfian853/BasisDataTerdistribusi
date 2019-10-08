@@ -5,5 +5,7 @@
 
 ## Spesifikasi
 Masing-masing Server memiliki spesifikasi sebagai berikut:
+
 Operating System : Ubuntu(64-bit)
+
 Base Memory : 1024 MB
