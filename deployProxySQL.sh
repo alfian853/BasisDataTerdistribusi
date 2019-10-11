@@ -24,6 +24,8 @@ sudo ufw allow 3306
 sudo systemctl start proxysql
 mysql -u admin -p -h 127.0.0.1 -P 6032 < /vagrant/proxysql.sql
 
-#sudo apt install apache2 libapache2-mod-php
-#curl -s https://packagecloud.io/install/repositories/phalcon/stable/script.deb.sh | sudo bash
-
+sudo apt install apache2 libapache2-mod-php
+sudo apt-get install php php-mysql php-curl php-gettext php-json php-json php-mbstring php-pdo_* php-fileinfo
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update
+sudo apt-get install php-phalcon
