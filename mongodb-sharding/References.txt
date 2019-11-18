@@ -1,0 +1,13 @@
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+https://www.linode.com/docs/databases/mongodb/build-database-clusters-with-mongodb/
+
+
+rs.initiate( { _id: "rs0", configsvr: true, members: [ { _id: 0, host: "192.168.33.11:27019" }, { _id: 1, host: "192.168.33.12:27019" } ] } )
+
+
+sh.addShard("rs1/192.168.33.15:27017")
+sh.addShard("rs2/192.168.33.16:27017")
+sh.addShard("rs3/192.168.33.17:27017")
+
+mongoimport --host 192.168.33.14 --port 27017 -d bdtDB -c baby_names --type csv --file /vagrant/data.csv --headerline -u mongo-admin -p password --authenticationDatabase admin
+
