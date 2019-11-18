@@ -1,0 +1,3 @@
+use bdtDB
+db.baby_names.ensureIndex( { _id : "hashed" } )
+sh.shardCollection( "bdtDB.baby_names", { "_id" : "hashed" } )

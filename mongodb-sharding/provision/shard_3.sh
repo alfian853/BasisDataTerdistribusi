@@ -21,5 +21,7 @@ sudo apt-get update
 # Install MongoDB
 sudo apt-get install -y mongodb-org
 
+sudo cp /vagrant/provision/shard_3.conf /etc/mongod.conf
+
 # Start MongoDB
 sudo service mongod start

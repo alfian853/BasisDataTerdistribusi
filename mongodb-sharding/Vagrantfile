@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
       vb.memory = "1024"
     end
 
-    mongo_config_1.vm.provision "shell", path: "provision/allhosts.sh", privileged: false
+    mongo_config_1.vm.provision "shell", path: "provision/config_1.sh", privileged: false
   end
 
   config.vm.define "mongo_config_2" do |mongo_config_2|
@@ -28,7 +28,7 @@ Vagrant.configure("2") do |config|
       vb.memory = "1024"
     end
 
-    mongo_config_2.vm.provision "shell", path: "provision/allhosts.sh", privileged: false
+    mongo_config_2.vm.provision "shell", path: "provision/config_2.sh", privileged: false
   end
 
 
@@ -43,7 +43,7 @@ Vagrant.configure("2") do |config|
       vb.memory = "1024"
     end
 
-    mongo_query_router.vm.provision "shell", path: "provision/allhosts.sh", privileged: false
+    mongo_query_router.vm.provision "shell", path: "provision/query_router.sh", privileged: false
   end
 
   config.vm.define "mongo_shard_1" do |mongo_shard_1|
@@ -57,7 +57,7 @@ Vagrant.configure("2") do |config|
       vb.memory = "1024"
     end
 
-    mongo_shard_1.vm.provision "shell", path: "provision/allhosts.sh", privileged: false
+    mongo_shard_1.vm.provision "shell", path: "provision/shard_1.sh", privileged: false
   end
 
   config.vm.define "mongo_shard_2" do |mongo_shard_2|
@@ -71,7 +71,7 @@ Vagrant.configure("2") do |config|
       vb.memory = "1024"
     end
 
-    mongo_shard_2.vm.provision "shell", path: "provision/allhosts.sh", privileged: false
+    mongo_shard_2.vm.provision "shell", path: "provision/shard_2.sh", privileged: false
   end
 
   config.vm.define "mongo_shard_3" do |mongo_shard_3|
@@ -85,7 +85,7 @@ Vagrant.configure("2") do |config|
       vb.memory = "1024"
     end
 
-    mongo_shard_3.vm.provision "shell", path: "provision/allhosts.sh", privileged: false
+    mongo_shard_3.vm.provision "shell", path: "provision/shard_3.sh", privileged: false
   end
 
 

@@ -1,0 +1,9 @@
+sh.addShard( "rs1/192.168.33.15:27017" )
+sh.addShard( "rs2/192.168.33.16:27017" )
+sh.addShard( "rs3/192.168.33.17:27017" )
+
+use bdtDB
+
+sh.enableSharding("bdtDB")
+
+
