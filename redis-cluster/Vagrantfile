@@ -1,0 +1,50 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+
+  config.vm.define "redis_1" do |redis_1|
+    redis_1.vm.hostname = "mongo-shard-1"
+    redis_1.vm.box = "bento/ubuntu-18.04"
+    redis_1.vm.network "private_network", ip: "192.168.16.73"
+        
+    redis_1.vm.provider "virtualbox" do |vb|
+      vb.name = "redis-1"
+      vb.gui = false
+      vb.memory = "1024"
+    end
+
+    redis_1.vm.provision "shell", path: "provision/allhost.sh", privileged: false
+  end
+
+  config.vm.define "redis_2" do |redis_2|
+    redis_2.vm.hostname = "mongo-shard-2"
+    redis_2.vm.box = "bento/ubuntu-18.04"
+    redis_2.vm.network "private_network", ip: "192.168.16.74"
+    
+    redis_2.vm.provider "virtualbox" do |vb|
+      vb.name = "mongo-shard-2"
+      vb.gui = false
+      vb.memory = "1024"
+    end
+
+    redis_2.vm.provision "shell", path: "provision/allhost.sh", privileged: false
+  end
+
+  config.vm.define "redis_3" do |redis_3|
+    redis_3.vm.hostname = "mongo-shard-3"
+    redis_3.vm.box = "bento/ubuntu-18.04"
+    redis_3.vm.network "private_network", ip: "192.168.16.75"
+    
+    redis_3.vm.provider "virtualbox" do |vb|
+      vb.name = "mongo-shard-3"
+      vb.gui = false
+      vb.memory = "1024"
+    end
+
+    redis_3.vm.provision "shell", path: "provision/allhost.sh", privileged: false
+  end
+
+
+end
