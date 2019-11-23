@@ -6,33 +6,35 @@
 
 ## Instalasi
 
-- jalankan "vagrant up"
+- jalankan ``vagrant up``
 
-- cek redis replication info pada setiap server dengan "redis-cli -h [ip server] -p 6380", lalu "info replication", maka outputnya seperti dibawah ini:
+- cek redis replication info pada setiap server dengan ``redis-cli -h [ip server] -p 6380``, lalu ``info replication``, maka outputnya seperti dibawah ini:
 
+redis info master:
 ![](screenshots/redis-info-1.png)
-*redis info master*
 
+
+redis info slave 1:
 ![](screenshots/redis-info-2.png)
-*redis info slave 1*
 
+
+redis info slave 2:
 ![](screenshots/redis-info-3.png)
-*redis info slave 2*
 
-- cek juga redis sentinel info pada setiap server dengan "redis-cli -h [ip server] -p 16380", lalu "info sentinel", maka outputnya seperti dibawah ini:
+- cek juga redis sentinel info pada setiap server dengan ``redis-cli -h [ip server] -p 16380``, lalu ``info sentinel``, maka outputnya seperti dibawah ini:
 
+redis info master:
 ![](screenshots/sentinel-1.png)
-*redis info master*
 
+redis info slave 1:
 ![](screenshots/sentinel-2.png)
-*redis info slave 1*
 
+redis info slave 2
 ![](screenshots/sentinel-3.png)
-*redis info slave 2*
 
 
 ## Wordpress
-- Pada wp-config.php tambahkan "define('FS_METHOD','direct')" untuk mengallow wordpress menginstall plugin secara langsung tanpa menggunakan FTP
+- Pada wp-config.php tambahkan ``define('FS_METHOD','direct')`` untuk mengallow wordpress menginstall plugin secara langsung tanpa menggunakan FTP
 - Tambahkan config berikut pada wp-config.php
 ![](screenshots/wp_redis_config.png)
 
@@ -60,7 +62,6 @@ dengan catatan komentar pada postingan tersebut sudah ditambahkan agar query ke 
 
 ![](screenshots/wp-redis-273.png)
 *273 request selama 10 detik*
-
 
 
 
