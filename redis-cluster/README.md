@@ -65,8 +65,7 @@ dengan catatan komentar pada postingan tersebut sudah ditambahkan agar query ke 
 
 
 
-### 2. Tanpa Redis Object Cache
-
+### 2. Tanpa Redis Object Cache 
 
 ![](screenshots/wp-no-redis-50.png)
 *50 request selama 10 detik*
