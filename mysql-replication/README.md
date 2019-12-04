@@ -1,7 +1,7 @@
 # BasisDataTerdistribusi
 
 ## Arsitektur
-![alt text](https://github.com/alfian853/BasisDataTerdistribusi/blob/master/screenshots/arsitektur.png)
+![alt text](screenshots/arsitektur.png)
 
 ## Spesifikasi
 Masing-masing Server memiliki spesifikasi sebagai berikut:
@@ -26,7 +26,7 @@ mysql> select * from inventories;
 
 maka akan muncul output seperti ini
 
-![alt_text](https://github.com/alfian853/BasisDataTerdistribusi/blob/master/screenshots/cek_db.png)
+![alt_text](screenshots/cek_db.png)
 
 ulangilah proses pengecekan tersebut ke db5 dan db6
 
@@ -53,7 +53,7 @@ repository tersebut diclone di folder vagrant untuk mempermudah konfigurasi karn
 
 notes : sesuaikan config DocumentRoot dengan path project phalcon-clean-code
 
-![alt_text](https://github.com/alfian853/BasisDataTerdistribusi/blob/master/screenshots/apacheconf.png)
+![alt_text](screenshots/apacheconf.png)
 
 8. aktifkan konfigurasi tersebut dengan
 > sudo a2ensite phalcon-clean-code
@@ -63,9 +63,9 @@ notes : sesuaikan config DocumentRoot dengan path project phalcon-clean-code
 
 10. isilah config tersebut dengan value berikut:
 
-![alt_text](https://github.com/alfian853/BasisDataTerdistribusi/blob/master/screenshots/phalcon-env.png)
+![alt_text](screenshots/phalcon-env.png)
 
 11. coba akses url ini di browser : 192.168.16.73:8008
-![alt_text](https://github.com/alfian853/BasisDataTerdistribusi/blob/master/screenshots/hasil.png)
+![alt_text](screenshots/hasil.png)
 
 
