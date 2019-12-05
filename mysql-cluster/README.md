@@ -1,3 +1,7 @@
+# Arsitektur
+
+![](screenshots/architecture.png)
+
 # Instalasi
 
 Jalankan 
@@ -113,9 +117,9 @@ setelah itu seharusnya akan muncul output sebagai berikut.
 ![](screenshots/spring-server.png)
 
 
-## Uji Performa
+# Uji Performa
 
-### A. Jmeter
+## A. Jmeter
 Berikut adalah hasil pengujian performa pada API pada url 
 `http://localhost:8081/baby_names/1`
 
@@ -125,7 +129,7 @@ Berikut adalah hasil pengujian performa pada API pada url
 2. 500 koneksi
 ![](screenshots/jmeter_500.png)
 
-### B. Sysbench
+## B. Sysbench
 
 1. inisiasi data test dari sysbench
     ```
@@ -148,8 +152,8 @@ C. 3 server
 ![](screenshots/sysbench_3server.png)
 
 
-## Monitoring
-### Instalasi Mysql Exporter
+# Monitoring
+## Instalasi Mysql Exporter
 Download dulu mysqld_exporter dengan `wget https://github.com/prometheus/mysqld_exporter/releases/download/v0.11.0/mysqld_exporter-0.11.0.linux-amd64.tar.gz`
 
 Untuk setiap vm server lakukan hal berikut.
@@ -187,7 +191,7 @@ Untuk setiap vm server lakukan hal berikut.
 7. `sudo systemctl start mysql_exporter.service`
 7. `sudo systemctl status mysql_exporter.service`
 
-### Instalasi Prometheus
+## Instalasi Prometheus
 Lakukan instalasi ini di local
 1. `wget https://github.com/prometheus/prometheus/releases/download/v2.0.0/prometheus-2.0.0.linux-amd64.tar.gz`
 2. `tar xvf prometheus-2.0.0.linux-amd64.tar.gz`
@@ -232,7 +236,7 @@ Lakukan instalasi ini di local
 9. `sudo systemctl daemon-reload`
 10. `sudo systemctl start prometheus`
 
-### Instalasi Grafana
+## Instalasi Grafana
 
 1. `sudo wget -q -O - https://packages.grafana.com/gpg.key | apt-key add -`
 2. `sudo apt-get update`
