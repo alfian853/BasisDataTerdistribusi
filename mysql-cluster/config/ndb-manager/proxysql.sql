@@ -2,7 +2,7 @@ INSERT INTO mysql_group_replication_hostgroups (writer_hostgroup, backup_writer_
 
 INSERT INTO mysql_servers(hostgroup_id, hostname, port) VALUES (2, '192.168.16.74', 3306);
 INSERT INTO mysql_servers(hostgroup_id, hostname, port) VALUES (2, '192.168.16.75', 3306);
-INSERT INTO mysql_servers(hostgroup_id, hostname, port) VALUES (2, '192.168.16.7', 3306);
+INSERT INTO mysql_servers(hostgroup_id, hostname, port) VALUES (2, '192.168.16.76', 3306);
 LOAD MYSQL SERVERS TO RUNTIME;
 SAVE MYSQL SERVERS TO DISK;
 
